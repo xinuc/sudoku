@@ -38,8 +38,8 @@
                     android:id="@+id/about_button"
                     android:text="@string/about_label"/>
                 <Button
-                        android:id="@+id/exit_button"
-                        android:text="@string/exit_label"/>
+                    android:id="@+id/exit_button"
+                    android:text="@string/exit_label"/>
             </TableRow>
          </TableLayout>
      </LinearLayout>

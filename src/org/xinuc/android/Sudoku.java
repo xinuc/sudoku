@@ -1,7 +1,8 @@
-package org.xinuc;
+package org.xinuc.android;
 
 import android.app.Activity;
 import android.os.Bundle;
+import org.xinuc.android.R;
 
 public class Sudoku extends Activity
 {
