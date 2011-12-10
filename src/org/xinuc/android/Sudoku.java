@@ -39,6 +39,9 @@ public class Sudoku extends Activity implements View.OnClickListener {
             case R.id.new_button:
                 openNewGameDialog();
                 break;
+            case R.id.exit_button:
+                finish();
+                break;
         }
     }
 
