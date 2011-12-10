@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import org.xinuc.android.R;
 
@@ -42,5 +43,15 @@ public class Sudoku extends Activity implements View.OnClickListener {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings:
+                startActivity(new Intent(this, Prefs.class));
+                return true;
+        }
+        return false;
     }
 }
