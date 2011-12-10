@@ -1,13 +1,15 @@
 package org.xinuc.android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import org.xinuc.android.R;
 
 public class Sudoku extends Activity implements View.OnClickListener {
     /** Called when the activity is first created. */
@@ -34,7 +36,28 @@ public class Sudoku extends Activity implements View.OnClickListener {
                 Intent i = new Intent(this, About.class);
                 startActivity(i);
                 break;
+            case R.id.new_button:
+                openNewGameDialog();
+                break;
         }
+    }
+
+    private static final String TAG = "Sudoku";
+
+    private void openNewGameDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.new_game_title)
+                .setItems(R.array.difficulty,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                startGame(i);
+                            }
+                        })
+                .show();
+    }
+
+    private void startGame(int i) {
+        Log.d(TAG, "clicked on " + i);
     }
 
     @Override
