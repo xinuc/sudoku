@@ -14,8 +14,7 @@ import android.view.View;
 public class Sudoku extends Activity implements View.OnClickListener {
     /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
