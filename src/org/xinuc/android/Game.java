@@ -36,4 +36,20 @@ public class Game extends Activity {
         this.puzzleView.requestFocus();
 
     }
+
+    public String getTileString(int i, int j) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public void showKeypadOrError(int selX, int selY) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public boolean setTileIfValid(int selX, int selY, int tile) {
+        return false;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public int[] getUsedTiles(int i, int j) {
+       return new int[]{1, 2, 3};
+    }
 }
